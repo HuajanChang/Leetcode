@@ -1,7 +1,7 @@
 /******************************************************************************
 
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
+                            Online C++ Compiler.
+             Code, Compile, Run and Debug C++ program online.
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
@@ -26,7 +26,7 @@ public:
 			{
 				if (nums[i] + nums[j] == target)
 				{
-					return {i, j};
+					return {nums[i], nums[j]};
 				}
 			}
 		}
@@ -50,10 +50,16 @@ int main()
 
 	*/
 	vector<int> nums{2,7,11,15};
+
+	for(int i : nums) {
+		cout << i <<" " ;
+	}
+	cout <<   "\n";
+	
 	Solution sol;
 	vector<int> ans = sol.twoSum(nums, 9);
-	for(int num : ans) {
-		cout << num << " ";
+	for(int i : ans) {
+		cout << i << " ";
 	}
 	return 0;
 }
